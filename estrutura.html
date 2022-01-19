@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widith, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 class="titulo">HyperText Markup Language</h1>
+    <hr>
+    
+    <h2 class="subtitulo">Conceitos básicos</h2>
+    
+    <p>Criada por Tim Berners-Lee, HTML é uma linguagem par marcação de textos usando tags. É muito usada na estruturação de sites, funcionando como um "esqueleto" para a página e possibilitando ao navegador interpreta-lo e exibi-lo de acordo com as suas especificações. Diferente da CSS, que é voltada para o design, a HTML é focada no conteúdo da página. </p>
+    
+    <p>O que diferencia um documento HTML de outros documentos de texto comuns é a possibilidade de "linkar" outros documentos e mídias no próprio texto, daí o nome <strong>Hypertext</strong>.</p>
+    
+    <h2 class="subtitulo">Estrutura básica de um documento HTML5</h2>
+    
+    <p>A estrutura básica é oganizada em <strong>elementos</strong>, e cada elemento é composto por uma <strong>tag</strong>, escrita entre <strong>parênteses angulares</strong>.</p>
+    
+    <code>
+        <span class="green">&lt;p&gt;</span><span class="purple">hello, world!</span><span class="green">&lt;/p&gt;</span>
+    </code>
+    
+    <p>A tag <em>p</em> é um exemplo de um elemento com tag de abertura e fechamento, com a tag de fechamento sendo indicada pela barra (/) antes do seu nome.</p>
+    
+    <p>A maioria das tags também contém atributos que configuram o seu comportamento. A tag <em>a</em> por exemplo, cria um link para outro documento, usando o parâmetro <em>href</em> com o valor <em>http://developer.mozilla.org</em> para identificar o link a ser direcionado, no caso, a página principal da <a href="http://developer.mozilla.org">MDN Web Docs</a>, a plataforma de desenvolvimento web do grupo Mozilla.</p>
+    
+    <code>
+     &lt;a href="https://developer.mozilla.org&gt;MDN Web Docs&lt;/a&gt;
+    </code>
+    
+    <p>Por outro lado, alguns elementos não precisam de tag de fechamento ou conteúdo.</p>
+    
+    <code>
+      &lt;br&gt;<br>&lt;img&gt;<br>&lt;hr&gt;
+    </code>
+    
+    <p>Um documento em HTML5 básico é composto por no mínimo 11 linhas, com elementos de configuração da página e seu conteúdo.</p>
+    <pre>
+    <code>
+1 &lt;!DOCTYPE html5&gt;
+2 &lt;html lang="pt-br"&gt;
+3   &lt;head&gt;
+4     &lt;meta charset="UTF-8"&gt;
+5     &lt;meta content="width=device-width initial-scale=1.0"&gt;
+6     &lt;title&gt;<em>Titulo da página</em>&lt;/title&gt;
+7   &lt;/head&gt;
+8   &lt;body&gt;
+9     &lt;!--Conteúdo da página--&gt;
+10  &lt;/body&gt;
+11 &lt;/html&gt;
+    </code>
+    </pre>
+    
+    <h3>Linha 1 - <code>&lt;!DOCTYPE html&gt;</code></h3>
+    
+    <p>A tag <em>DOCTYPE</em> acompanhado do atributo <em>html</em> informa ao navegador o tipo de documento, no caso HTML5</p>
+    
+    <h3>Linhas 2 e 11 - <code>&lt;html lang="pt-br"&gt;&lt;/html&gt;</code> </h3>
+    
+    <p>Indica o início e fim que engloba todo o conteúdo do documento em HTML. O atributo <em>lang</em> diz ao navegador o idioma principal da página.</p>
+    
+    <h3>Linhas 3 e 7 - <code>&lt;head&gt;&lt;/head&gt;</code></h3>
+    
+    <p>Indica o início e o fim do cabeçalho, que contém as configurações da página. Em geral as "subtags" desta tag não aparecem na página, apenas configuram o comportamento dela.</p>
+    
+    <h3>Linha 4 - <code>&lt;meta charset="utf-8"&gt;</code></h3>
+    
+    <p>Esta linha é necessário para configurar o suporte a caracteres especiais e acentuação da página atual.</p>
+    
+    <h3>Linha 5 - <code>&lt;meta content="width=device-width, initial-scale=1.0"&gt;</code></h3>
+    
+    <p>Configura a escala inicial da página para usar todo o espaço disponível, numa escala de 1:1.</p>
+    
+    <h3>Linha 6 - <code>&lt;title&gt;&lt;/title&gt;</code> </h3>
+    
+    <p>Configura o título da página.</p>
+    
+    <h3>Linhas 8 e 10 - <code>&lt;body&gt;&lt;/body&gt;</code> </h3>
+    
+    <p>Indicam o início e o fim do corpo da página, onde fica todo o conteúdo a ser mostrado.</p>
+  </body>
+</html>
