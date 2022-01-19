@@ -4,20 +4,82 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tabelas</title>
+        <style>
+        </style>
     </head>
     <body>
         <h1>Tabelas</h1>
         
-        <p>Existe um conjunto de tags no HTML que permitem estruturar dados em duas dimensões no formato de uma tabela.</p>
+        <p>Existe um conjunto de tags no <strong>HTML</strong> que permitem estruturar dados em duas dimensões no formato de uma tabela, na qual as informações ficam contidas em células no formato linhas e colunas.</p>
         <code>
             <ul>
-                <li>&lt;</li>
+                <li><a href="#table">&lt;table&gt;</a></li>
+                <li><a href="#th">&lt;th&gt;</a></li>
+                <li><a href="#tr">&lt;tr&gt;</a></li>
+                <li><a href="#td">&lt;td&gt;</a></li>
+                <li><a href="#caption">&lt;caption&gt;</a></li>
+                <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
+                <li><a href="#col">&lt;col&gt;</a></li>
+                <li><a href="#thead">&lt;thead&gt;</a></li>
+                <li><a href="#tbody">&lt;tbody&gt;</a></li>
+                <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
             </ul>
         </code>
         
+        <p>Todas as tags que compõem a estrutura de tabela têm tag de fechamento.</p>
         
+        <p>Estruturando de forma básica e sem atributos, a tabela não terá delimitações visíveis, nem cor de fundo e originalmente eram usados os atributos para definir as cores. Porém esse recurso está obsoleto, e hoje em dia as cores são configuradas usando as <strong>CSS</strong>.</p>
+        
+        <div class="paragrafo_table">
+            <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
+            <p>As tags <code class="code_inline">&lt;table&gt;</code> e <code class="code_inline">&lt;/table&gt;</code> delimitam a estrutura da tabela.Todas as outras tags que formam a tabela são filhas da tag <code class="code_inline">&lt;table&gt;</code>.</p>
+            
+            <h3>Fluxo do conteúdo da tabela</h3>
+            <p>Nesta ordem:</p>
+            <ol>
+                <li>um elemento <a href="#caption">&lt;caption&gt;</a> opcional,</li>
+                <li>zero ou mais elementos <a href="#colgroup">&lt;colgroup&gt;</a>,</li>
+                <li>um elemento <a href="#thead">&lt;thead&gt;</a> opcional,</li>
+                <li>uma das duas alternativas:</li>
+                    <ul>
+                        <li>um elemento <a href="#tfoot">&lt;tfoot&gt;</a> seguido por,</li>
+                            <ul type="disk">
+                                <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
+                                <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
+                            </ul>
+                        <li>uma segunda alternativa seguida por um elemento <a href="#tfoot">&lt;tfoot</a> opcional</li>
+                            <ul type="disk">
+                                <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
+                                <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
+                            </ul>
+                    </ul>
+            </ol>
+        </div>
+        
+        <div class="paragrafo_td">
+            <h2 id="td" class="titulo">Célula de dados - &lt;td&gt;</h2>
+            <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code>. 
+        </div>
         <!--
         O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
         -->
     </body>
 </html>
+
+<!--
+codigos
+
+&lt;&gt;
+-->
+<!--
+                <table>	Defines a table
+                <th> Defines a header cell in a table
+                <tr> Defines a row in a table
+                <td> Defines a cell in a table
+                <caption> Defines a table caption
+                <colgroup> Specifies a group of one or more columns in a table for formatting
+                <col> Specifies column properties for each column within a <colgroup> element
+                <thead> Groups the header content in a table
+                <tbody>	Groups the body content in a table
+                <tfoot> Groups the footer content in a table
+                -->
