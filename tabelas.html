@@ -5,6 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tabelas</title>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .exemplo {
+                background-color: rgba(128, 128, 128, 0.295);
+            }
+            
+            .ul_disc {
+                list-style-type: disc;
+            }
+
+            .ul_square {
+                list-style-type: square;
+            }
+
+
         </style>
     </head>
     <body>
@@ -41,14 +59,14 @@
                 <li>zero ou mais elementos <a href="#colgroup">&lt;colgroup&gt;</a>,</li>
                 <li>um elemento <a href="#thead">&lt;thead&gt;</a> opcional,</li>
                 <li>uma das duas alternativas:</li>
-                    <ul>
+                    <ul class="ul_disc">
                         <li>um elemento <a href="#tfoot">&lt;tfoot&gt;</a> seguido por,</li>
-                            <ul type="disk">
+                            <ul class="ul_square">
                                 <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
                                 <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
                             </ul>
                         <li>uma segunda alternativa seguida por um elemento <a href="#tfoot">&lt;tfoot</a> opcional</li>
-                            <ul type="disk">
+                            <ul class="ul_square"> 
                                 <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
                                 <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
                             </ul>
@@ -58,7 +76,32 @@
         
         <div class="paragrafo_td">
             <h2 id="td" class="titulo">Célula de dados - &lt;td&gt;</h2>
-            <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code>. 
+            <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code> que contém os dados em seu contúdo.</p>
+            <p class="hint">A sigla <code class="code_inline">td</code> é do inglês <i>table data</i>.</p>
+
+            <div class="exemplo">
+                <h3>Exemplo</h3>
+                <p></p>
+                <pre class="pre_exemplo">
+                    <code>
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;HTML&lt;/td&gt;
+                                &lt;td&gt;CSS&lt;/td&gt;
+                                &lt;td&gt;JavaScript&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code>
+                </pre>
+                <p>Saída</p>
+                <table>
+                    <tr>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>JavaScript</td>
+                    </tr>
+                </table> 
+            </div>
         </div>
         <!--
         O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
