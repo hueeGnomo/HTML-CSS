@@ -10,6 +10,13 @@
                 padding: 0;
             }
             
+            .main {
+                width: 900px;
+                border: 1px solid black;
+                margin: 0 auto;
+                padding: 15px;
+            }
+
             .ul_disc {
                 list-style-type: disc;
             }
@@ -20,17 +27,27 @@
             
             .exemplo {
                 background-color: lightgrey;
-                padding: 50px;
+
+                border-radius: 5px;
+                padding: 30px;
+                width: 90%;
+            }
+
+            .exemplo-titulo {
+                margin-bottom: 10px;
             }
             
             .exemplo-codigo, .exemplo-saida {
                 background-color: white;
-                width: 270px;
+                width: 90%;
                 border-left: 7px solid #5FEBCE;
                 line-height: 1.5em;
                 
                 padding: 20px;
-                margin: 10px auto;
+            }
+
+            .exemplo-codigo {
+                margin-bottom: 20px;
             }
             
             .p_incode > span {
@@ -40,108 +57,114 @@
         </style>
     </head>
     <body>
-        <h1 class="titulo_principal">Tabelas</h1>
-        
-        <p>Existe um conjunto de tags no <strong>HTML</strong> que permitem estruturar dados em duas dimensões no formato de uma tabela, na qual as informações ficam contidas em células no formato linhas e colunas.</p>
-        <code>
-            <ul>
-                <li><a href="#table">&lt;table&gt;</a></li>
-                <li><a href="#th">&lt;th&gt;</a></li>
-                <li><a href="#tr">&lt;tr&gt;</a></li>
-                <li><a href="#td">&lt;td&gt;</a></li>
-                <li><a href="#caption">&lt;caption&gt;</a></li>
-                <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
-                <li><a href="#col">&lt;col&gt;</a></li>
-                <li><a href="#thead">&lt;thead&gt;</a></li>
-                <li><a href="#tbody">&lt;tbody&gt;</a></li>
-                <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
-            </ul>
-        </code>
-        
-        <p>Todas as tags que compõem a estrutura de tabela têm tag de fechamento.</p>
-        
-        <p>Estruturando de forma básica e sem atributos, a tabela não terá delimitações visíveis, nem cor de fundo e originalmente eram usados os atributos para definir as cores. Porém esse recurso está obsoleto, e hoje em dia as cores são configuradas usando as <strong>CSS</strong>.</p>
-        
-        <div class="paragrafo_table">
-            <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
-            <p>As tags <code class="code_inline">&lt;table&gt;</code> e <code class="code_inline">&lt;/table&gt;</code> delimitam a estrutura da tabela.Todas as outras tags que formam a tabela são filhas da tag <code class="code_inline">&lt;table&gt;</code>.</p>
+        <div class="main">
+            <h1 class="titulo_principal">Tabelas</h1>
             
-            <h3>Fluxo do conteúdo da tabela</h3>
-            <p>Nesta ordem:</p>
-            <ol>
-                <li>um elemento <a href="#caption">&lt;caption&gt;</a> opcional,</li>
-                <li>zero ou mais elementos <a href="#colgroup">&lt;colgroup&gt;</a>,</li>
-                <li>um elemento <a href="#thead">&lt;thead&gt;</a> opcional,</li>
-                <li>uma das duas alternativas:</li>
-                    <ul class="ul_disc">
-                        <li>um elemento <a href="#tfoot">&lt;tfoot&gt;</a> seguido por,</li>
-                            <ul class="ul_square">
-                                <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
-                                <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
-                            </ul>
-                        <li>uma segunda alternativa seguida por um elemento <a href="#tfoot">&lt;tfoot</a> opcional</li>
-                            <ul class="ul_square"> 
-                                <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
-                                <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
-                            </ul>
-                    </ul>
-            </ol>
-        </div>
-        
-        <div class="paragrafo_td">
-            <h2 id="td" class="titulo">Células de dados - &lt;td&gt;</h2>
-            <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code> que contém os dados em seu contúdo.</p>
-            <p class="hint">A sigla <code class="code_inline">td</code> é do inglês <i>table data</i>.</p>
+            <p>Existe um conjunto de tags no <strong>HTML</strong> que permitem estruturar dados em duas dimensões no formato de uma tabela, na qual as informações ficam contidas em células no formato linhas e colunas.</p>
+            <code>
+                <ul>
+                    <li><a href="#table">&lt;table&gt;</a></li>
+                    <li><a href="#th">&lt;th&gt;</a></li>
+                    <li><a href="#tr">&lt;tr&gt;</a></li>
+                    <li><a href="#td">&lt;td&gt;</a></li>
+                    <li><a href="#caption">&lt;caption&gt;</a></li>
+                    <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
+                    <li><a href="#col">&lt;col&gt;</a></li>
+                    <li><a href="#thead">&lt;thead&gt;</a></li>
+                    <li><a href="#tbody">&lt;tbody&gt;</a></li>
+                    <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
+                </ul>
+            </code>
             
-            <div class="exemplo">
-                <h3 class="exemplo-titulo">Exemplo</h3>
-                <div class="exemplo-codigo">
-                    <code>
-                        <p class="p_incode">
-                            <span>&lt;tables&gt;</span>
-                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
-                                    <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
-                                    <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
-                                    <span style="margin-left: 40px;">&lt;td&gt; JavaScript&lt;/td&gt;</span>
-                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
-                            <span>&lt;/table&gt;</span>
-                        </p>
-                    </code>
-                </div>
-                
-                <h3 class="exemplo-titulo" style="margin-top: 30px;">Saída</h3>
-                <div class="exemplo-saida">
-                    <table>
-                        <tr>
-                            <td>HTML</td>
-                            <td>CSS</td>
-                            <td>JavaScript</td>
-                        </tr>
-                    </table>
-                </div>
+            <p>Todas as tags que compõem a estrutura de tabela têm tag de fechamento.</p>
+            
+            <p>Estruturando de forma básica e sem atributos, a tabela não terá delimitações visíveis, nem cor de fundo e originalmente eram usados os atributos para definir as cores. Porém esse recurso está obsoleto, e hoje em dia as cores são configuradas usando as <strong>CSS</strong>.</p>
+            
+            <div class="paragrafo_table">
+                <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
+                <p>As tags <code class="code_inline">&lt;table&gt;</code> e <code class="code_inline">&lt;/table&gt;</code> delimitam a estrutura da tabela.Todas as outras tags que formam a tabela são filhas da tag <code class="code_inline">&lt;table&gt;</code>.</p>
+            
+                <h3>Fluxo do conteúdo da tabela</h3>
+                <p>Nesta ordem:</p>
+                <ol>
+                    <li>um elemento <a href="#caption">&lt;caption&gt;</a> opcional,</li>
+                    <li>zero ou mais elementos <a href="#colgroup">&lt;colgroup&gt;</a>,</li>
+                    <li>um elemento <a href="#thead">&lt;thead&gt;</a> opcional,</li>
+                    <li>uma das duas alternativas:</li>
+                        <ul class="ul_disc">
+                            <li>um elemento <a href="#tfoot">&lt;tfoot&gt;</a> seguido por,</li>
+                                <ul class="ul_square">
+                                    <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
+                                    <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
+                                </ul>
+                            <li>uma segunda alternativa seguida por um elemento <a href="#tfoot">&lt;tfoot</a> opcional</li>
+                                <ul class="ul_square">
+                                    <li>zero ou mais elementos <a href="#tbory">&lt;tbory&gt;</a>,</li>
+                                    <li>ou um ou mais elementos <a href="#tr">&lt;tr&gt;</a>,</li>
+                                </ul>
+                        </ul>
+                </ol>
             </div>
             
-            <p class="hint">As células de dados são containers da tabela que podem ter varias outras tags  em seu conteúdo.<br>Antes das <strong>CSS</strong>, era muito comum serem usados tabelas para estilizar os sites.</p>
+            <div class="paragrafo_td">
+                <h2 id="td" class="titulo">Células de dados - &lt;td&gt;</h2>
+                <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code> que contém os dados em seu contúdo.</p>
+                <p class="hint">A sigla <code class="code_inline">td</code> é do inglês <i>table data</i>.</p>
             
-            <h3>Atributos</h3>
+                <div class="exemplo">
+                    <h3 class="exemplo-titulo">Exemplo</h3>
+                    <div class="exemplo-codigo">
+                        <code>
+                            <p class="p_incode">
+                                <span>&lt;tables&gt;</span>
+                                    <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;JavaScript&lt;/td&gt;</span>
+                                    <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span>&lt;/table&gt;</span>
+                            </p>
+                        </code>
+                    </div>
             
-            <p>Atualmente três atributos podem ser usados nos elementos <code class="code_inline">td</code>.</p>
+                    <h3 class="exemplo-titulo">Saída</h3>
+                    <div class="exemplo-saida">
+                        <table>
+                            <tr>
+                                <td>HTML</td>
+                                <td>CSS</td>
+                                <td>JavaScript</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             
-            <dl class="atributos">
-                <dt><span class="atributos-termo">colspan</span> e <span class="atributos-termo">rowspan</span></dt>
-                <dd class="atributos-descricao">
-                    Fazem com que as células ocupem o espaço de outras células tanto na linha (rowspan) quanto na coluna (cowspan). Recebem valores inteiros positivos que configuram quantas linhas/colunas a célula vai ocupar. Colspan permite ate 1000 colunas e rowspan permite até 65534 linhas, acima disso o valor é reduzido ao valor máximo. Além disso, definindo 0 ao rowspan, a célula será estendida ate o final da sessão da tabela que a contem.
-                </dd>
-                
-                <dt><span class="atributos-termo">headers</span></dt>
-            </dl>
+                <p class="hint">As células de dados são containers da tabela que podem ter varias outras tags  em seu conteúdo.<br>Antes das <strong>CSS</strong>, era muito comum serem usados tabelas para estilizar os sites.</p>
+            
+                <h3>Atributos</h3>
+            
+                <p>Atualmente, além dos atributos globais, três outros atributos podem ser usados nos elementos <code class="code_inline">td</code>.</p>
+            
+                <dl class="atributos">
+                    <dt><span class="atributos-termo">colspan</span> e <span class="atributos-termo">rowspan</span></dt>
+                    <dd class="atributos-descricao">
+                        Fazem com que as células ocupem o espaço de outras células tanto na linha (rowspan) quanto na coluna (cowspan). Recebem valores inteiros positivos que configuram quantas linhas/colunas a célula vai ocupar. Colspan permite até 1000 colunas e rowspan permite até 65534 linhas, acima disso o valor é reduzido ao valor máximo. Além disso, definindo 0 ao rowspan, a célula será estendida ate o final da sessão da tabela que a contém.
+                    </dd>
+            
+                    <dt><span class="atributos-termo">headers</span></dt>
+                    <dd class="atributos-descricao">Recebe uma lista de strings separadas por vírgulas que correspondem ao atributo <i><span class="code_inline green">id</span></i> de tags <span class="code_inline"><a href="#th">&lt;th&gt;</a></span>.</dd>
+                </dl>
+            </div>
+            
+            <div class="paragrafo_tr">
+                <h2 id="tr" class="titulo">Linha da tabela - &lt;tr&gt;</h2>
+                <p>Define uma linha de células de dados na tabela. Pode conter também uma combinação de <span class="code_inline">&lt;td&gt;</span> (células de dados) e <span class="code_inline"><a href="#th">&lt;th&gt;</a> (células de cabeçalho)</span>.</p>
+            </div>
+            
+            <!--
+            O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
+            -->
         </div>
-        
-        
-        
-        <!--
-        O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
-        -->
     </body>
 </html>
 
