@@ -11,7 +11,7 @@
             }
             
             .main {
-                width: 900px;
+                width: 350px;
                 border: 1px solid black;
                 margin: 0 auto;
                 padding: 15px;
@@ -27,7 +27,7 @@
             
             .exemplo {
                 background-color: lightgrey;
-
+                max-width: 85%;
                 border-radius: 5px;
                 padding: 30px;
                 width: 90%;
@@ -64,10 +64,10 @@
             <code>
                 <ul>
                     <li><a href="#table">&lt;table&gt;</a></li>
-                    <li><a href="#th">&lt;th&gt;</a></li>
-                    <li><a href="#tr">&lt;tr&gt;</a></li>
-                    <li><a href="#td">&lt;td&gt;</a></li>
                     <li><a href="#caption">&lt;caption&gt;</a></li>
+                    <li><a href="#td">&lt;td&gt;</a></li>
+                    <li><a href="#tr">&lt;tr&gt;</a></li>
+                    <li><a href="#th">&lt;th&gt;</a></li>
                     <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
                     <li><a href="#col">&lt;col&gt;</a></li>
                     <li><a href="#thead">&lt;thead&gt;</a></li>
@@ -104,6 +104,12 @@
                                 </ul>
                         </ul>
                 </ol>
+            </div>
+            
+            <div class="paragrafo_caption">
+                <h2 id="caption" class="titulo">Legenda - &lt;caption&gt;</h2>
+                
+                <p>Define uma legenda para a tabela. Este elemento deve vir logo após o elemento <code class="code_inline"><a href="#table">&lt;table&gt;</a></code>.</p>
             </div>
             
             <div class="paragrafo_td">
@@ -143,22 +149,43 @@
             
                 <h3>Atributos</h3>
             
-                <p>Atualmente, além dos atributos globais, três outros atributos podem ser usados nos elementos <code class="code_inline">td</code>.</p>
+                <p>Atualmente, além dos atributos globais, três outros atributos podem ser usados: </p>
             
                 <dl class="atributos">
-                    <dt><span class="atributos-termo">colspan</span> e <span class="atributos-termo">rowspan</span></dt>
+                    <dt><code id="span" class="atributos-termo">colspan</code> e <code class="atributos-termo">rowspan</code></dt>
                     <dd class="atributos-descricao">
                         Fazem com que as células ocupem o espaço de outras células tanto na linha (rowspan) quanto na coluna (cowspan). Recebem valores inteiros positivos que configuram quantas linhas/colunas a célula vai ocupar. Colspan permite até 1000 colunas e rowspan permite até 65534 linhas, acima disso o valor é reduzido ao valor máximo. Além disso, definindo 0 ao rowspan, a célula será estendida ate o final da sessão da tabela que a contém.
                     </dd>
             
-                    <dt><span class="atributos-termo">headers</span></dt>
-                    <dd class="atributos-descricao">Recebe uma lista de strings separadas por vírgulas que correspondem ao atributo <i><span class="code_inline green">id</span></i> de tags <span class="code_inline"><a href="#th">&lt;th&gt;</a></span>.</dd>
+                    <dt><code id="headers" class="atributos-termo">headers</code></dt>
+                    <dd class="atributos-descricao">Recebe uma lista de strings separadas por vírgulas que correspondem ao atributo <i><code class="code_inline atributo">id</code></i> de tags <code class="code_inline"><a href="#th">&lt;th&gt;</a></code>.</dd>
                 </dl>
             </div>
             
             <div class="paragrafo_tr">
                 <h2 id="tr" class="titulo">Linha da tabela - &lt;tr&gt;</h2>
-                <p>Define uma linha de células de dados na tabela. Pode conter também uma combinação de <span class="code_inline">&lt;td&gt;</span> (células de dados) e <span class="code_inline"><a href="#th">&lt;th&gt;</a> (células de cabeçalho)</span>.</p>
+                <p>Define uma linha de células de dados na tabela. Pode conter também uma combinação de <code class="code_inline"><a href="#td">&lt;td&gt;</a></code> (células de dados) e <code class="code_inline"><a href="#th">&lt;th&gt;</a></code> (células de cabeçalho).</p>
+                <p>O número de linhas permitidas em uma tabela é ilimitado. Mas é uma boa pratica ter o mesmo número de espaços de células em todas as linhas, mesmo que não seja obrigatório pois algumas linhas levam menos células que outras, desde que a tabela esteja bem estruturada com <code class="code_inline atributo">rolspan</code> e <code class="code_inline atributo">colspan</code>.</p>
+                <p class="hint">A sigla <code class="code_inline">tr</code> é do ingles <i>table row</i>.</p>
+            </div>
+            
+            <div class="paragrafo_th">
+                <h2 id="th" class="titulo">Cabeçalho da tabela - &lt;th&gt;</h2>
+                <p>Funciona como um elemento <code><a href="#td">&lt;td&gt;</a></code> uma célula como um cabeçalho. Por padrão o texto contido neste elemento é apresentado em negrito e centralizado.</p>
+                
+                <p>Além dos atributos <code class="code_inline atributo"><a href="#span">colspan</a></code>, <code class="code_inline atributo"><a href="#span">rowspan</a></code> e <code class="code_inline atributo"><a href="#headers">headers</a></code>, o elemento ainda pode receber mais dois atributos:</p>
+                
+                <dl class="atributos">
+                    <dt><code id="abbr" class="atributos-termo">abbr</code></dt>
+                    <dd class="atributos-descricao">
+                        Recebe um texto descrevendo o conteudo do cabeçalho da tabela.
+                    </dd>
+            
+                    <dt><code id="scope" class="atributos-termo">scope</code></dt>
+                    <dd class="atributos-descricao">
+                      Possui quatro valores disponíveis (col, colgroup, row e rowgroup) que identificam se o cabeçalho é um cabeçalho da coluna, de um grupo de colunas, da linha ou de um grupo de linhas respectivamente.
+                    </dd>
+                </dl>
             </div>
             
             <!--
