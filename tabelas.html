@@ -10,13 +10,16 @@
                 padding: 0;
             }
             
-            .main {
+            main {
                 width: 350px;
                 border: 1px solid black;
                 margin: 0 auto;
                 padding: 15px;
             }
-
+            
+            section {
+                margin: 50px 0;
+            }
             .ul_disc {
                 list-style-type: disc;
             }
@@ -57,7 +60,7 @@
         </style>
     </head>
     <body>
-        <div class="main">
+        <main>
             <h1 class="titulo_principal">Tabelas</h1>
             
             <p>Existe um conjunto de tags no <strong>HTML</strong> que permitem estruturar dados em duas dimensões no formato de uma tabela, na qual as informações ficam contidas em células no formato linhas e colunas.</p>
@@ -68,8 +71,8 @@
                     <li><a href="#td">&lt;td&gt;</a></li>
                     <li><a href="#tr">&lt;tr&gt;</a></li>
                     <li><a href="#th">&lt;th&gt;</a></li>
-                    <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
                     <li><a href="#col">&lt;col&gt;</a></li>
+                    <li><a href="#col">&lt;colgroup&gt;</a></li>
                     <li><a href="#thead">&lt;thead&gt;</a></li>
                     <li><a href="#tbody">&lt;tbody&gt;</a></li>
                     <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
@@ -79,8 +82,26 @@
             <p>Todas as tags que compõem a estrutura de tabela têm tag de fechamento.</p>
             
             <p>Estruturando de forma básica e sem atributos, a tabela não terá delimitações visíveis, nem cor de fundo e originalmente eram usados os atributos para definir as cores. Porém esse recurso está obsoleto, e hoje em dia as cores são configuradas usando as <strong>CSS</strong>.</p>
+                
+            <!--col-->
+            <section class="sessao_col">
+                <h2 class="titulo">Colunas - &lt;col&gt;</h2>
+                <p>Como as tabelas são compostas basicamente de linhas e células de dados, a tag <code class="code_inline">&lt;col&gt;</code> informa ao navegador quais são as colunas e define suas propriedades, sendo apenas uma forma de referenciá-las, já que não exite tag para definir uma coluna, como a tag <code class="code_inline"><a href="#tr">&lt;tr&gt;</a></code> que define uma linha. A tag <code class="code_inline">col</code> também permite estilizar as colunas usando as <b>CSS</b>.</p>
             
-            <div class="paragrafo_table">
+            
+            <section class="sessao_col">
+                <h2 class="titulo">Agrupamento de colunas - &lt;colgroup&gt;</h2>
+                
+                
+                <h3 id="colgroup"><code class="code_inline">&lt;colgroup&gt;</code></h3>
+                <p>É mais usado para agrupar várias colunas 
+                <p>A tag <code class="code_inline">
+                &lt;colgroup&gt;</code> deve ser diretamente filha da tag <code class="code_inline">&lt;table&gt;</code> e </p>
+            </section>
+            
+            <!--
+            -->
+            <section class="sessao_table">
                 <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
                 <p>As tags <code class="code_inline">&lt;table&gt;</code> e <code class="code_inline">&lt;/table&gt;</code> delimitam a estrutura da tabela.Todas as outras tags que formam a tabela são filhas da tag <code class="code_inline">&lt;table&gt;</code>.</p>
             
@@ -104,15 +125,19 @@
                                 </ul>
                         </ul>
                 </ol>
-            </div>
+            </section>
             
-            <div class="paragrafo_caption">
+            <hr>
+            
+            <section class="sessao_caption">
                 <h2 id="caption" class="titulo">Legenda - &lt;caption&gt;</h2>
                 
                 <p>Define uma legenda para a tabela. Este elemento deve vir logo após o elemento <code class="code_inline"><a href="#table">&lt;table&gt;</a></code>.</p>
-            </div>
-            
-            <div class="paragrafo_td">
+            </section>
+             
+            <hr>
+             
+            <section class="sessao_td">
                 <h2 id="td" class="titulo">Células de dados - &lt;td&gt;</h2>
                 <p>Cada célula é definida pelas tags <code class="code_inline">&lt;td&gt;</code> e <code class="code_inline">&lt;/td&gt;</code> que contém os dados em seu contúdo.</p>
                 <p class="hint">A sigla <code class="code_inline">td</code> é do inglês <i>table data</i>.</p>
@@ -160,16 +185,20 @@
                     <dt><code id="headers" class="atributos-termo">headers</code></dt>
                     <dd class="atributos-descricao">Recebe uma lista de strings separadas por vírgulas que correspondem ao atributo <i><code class="code_inline atributo">id</code></i> de tags <code class="code_inline"><a href="#th">&lt;th&gt;</a></code>.</dd>
                 </dl>
-            </div>
+            </section>
             
-            <div class="paragrafo_tr">
+            <hr>
+             
+            <section class="sessao_tr">
                 <h2 id="tr" class="titulo">Linha da tabela - &lt;tr&gt;</h2>
                 <p>Define uma linha de células de dados na tabela. Pode conter também uma combinação de <code class="code_inline"><a href="#td">&lt;td&gt;</a></code> (células de dados) e <code class="code_inline"><a href="#th">&lt;th&gt;</a></code> (células de cabeçalho).</p>
                 <p>O número de linhas permitidas em uma tabela é ilimitado. Mas é uma boa pratica ter o mesmo número de espaços de células em todas as linhas, mesmo que não seja obrigatório pois algumas linhas levam menos células que outras, desde que a tabela esteja bem estruturada com <code class="code_inline atributo">rolspan</code> e <code class="code_inline atributo">colspan</code>.</p>
                 <p class="hint">A sigla <code class="code_inline">tr</code> é do ingles <i>table row</i>.</p>
-            </div>
+            </section>
             
-            <div class="paragrafo_th">
+            <hr>
+             
+            <section class="sessao_th">
                 <h2 id="th" class="titulo">Cabeçalho da tabela - &lt;th&gt;</h2>
                 <p>Funciona como um elemento <code><a href="#td">&lt;td&gt;</a></code> uma célula como um cabeçalho. Por padrão o texto contido neste elemento é apresentado em negrito e centralizado.</p>
                 
@@ -186,12 +215,15 @@
                       Possui quatro valores disponíveis (col, colgroup, row e rowgroup) que identificam se o cabeçalho é um cabeçalho da coluna, de um grupo de colunas, da linha ou de um grupo de linhas respectivamente.
                     </dd>
                 </dl>
-            </div>
+            </section>
+            
+            <hr>
+            -->
             
             <!--
             O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
             -->
-        </div>
+        </main>
     </body>
 </html>
 
