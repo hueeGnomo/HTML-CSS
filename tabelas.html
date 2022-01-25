@@ -11,7 +11,8 @@
             }
             
             main {
-                width: 350px;
+                width: 800px;
+                /*width: 350px;*/
                 border: 1px solid black;
                 margin: 0 auto;
                 padding: 15px;
@@ -20,6 +21,7 @@
             section {
                 margin: 50px 0;
             }
+
             .ul_disc {
                 list-style-type: disc;
             }
@@ -53,6 +55,13 @@
                 margin-bottom: 20px;
             }
             
+            .exemplo-saida > table, th, td {
+                text-align: center;
+                border: 1px solid black;
+                border-collapse: collapse;
+
+                padding: 3px;
+            }
             .p_incode > span {
                 display: block;
             }
@@ -72,7 +81,7 @@
                     <li><a href="#tr">&lt;tr&gt;</a></li>
                     <li><a href="#th">&lt;th&gt;</a></li>
                     <li><a href="#col">&lt;col&gt;</a></li>
-                    <li><a href="#col">&lt;colgroup&gt;</a></li>
+                    <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
                     <li><a href="#thead">&lt;thead&gt;</a></li>
                     <li><a href="#tbody">&lt;tbody&gt;</a></li>
                     <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
@@ -105,16 +114,35 @@
                     </div>
             
                     <h3 class="exemplo-titulo">Saída</h3>
-                    <div class="exemplo-saida">
+                    <div class="exemplo-saida exemplo-saida__col">
                         <table>
-                            
+                            <colgroup>
+                                <col> <!-- tag col vazia para pular a coluna -->
+                                <col span='2' >
+                            </colgroup>
                             <tr>
                                 <td></td> <!-- Célula em branco para ficar no canto da tabela -->
                                 <th scope="col">God of War</th>
-                                <th scpe="col">Hallo</th>
+                                <th scope="col">Horizon: Zero Dawn</th>
+                                <th scope="col">Halo</th>
+                                <th scope="col">Gears of War</th>
+                                <th scope="col">Zelda</th>
                             </tr>
                             <tr>
-                                <th>Plataforma</th>
+                                <th scope="row">Plataforma</th>
+                                <td>PlayStation</td>
+                                <td>PlayStation</td>
+                                <td>XBox</td>
+                                <td>XBox</td>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ano</th>
+                                <td>2005</td>
+                                <td>2017</td>
+                                <td>2001</td>
+                                <td>2006</td>
+                                <td>1986</td>
                             </tr>
                             
                         </table>
@@ -134,7 +162,7 @@
             </section>
             
             <!--
-            -->
+
             <section class="sessao_table">
                 <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
                 <p>As tags <code class="code_inline">&lt;table&gt;</code> e <code class="code_inline">&lt;/table&gt;</code> delimitam a estrutura da tabela.Todas as outras tags que formam a tabela são filhas da tag <code class="code_inline">&lt;table&gt;</code>.</p>
@@ -167,6 +195,8 @@
                 <h2 id="caption" class="titulo">Legenda - &lt;caption&gt;</h2>
                 
                 <p>Define uma legenda para a tabela. Este elemento deve vir logo após o elemento <code class="code_inline"><a href="#table">&lt;table&gt;</a></code>.</p>
+
+                <p>Por padrão, a legenda aparece acima da tabela. A propriedade <code class="code_inline propriedadeCSS">caption-side</code> das CSS com o valor <code class="code_inline" style="color:rgb(178, 32, 64)">bottom</code> pode ser usada para fazer com que ela apareça abaixo da tabela.</p>
             </section>
              
             <hr>
