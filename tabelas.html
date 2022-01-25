@@ -88,8 +88,42 @@
                 <h2 class="titulo">Colunas - &lt;col&gt;</h2>
                 <p>Como as tabelas são compostas basicamente de linhas e células de dados, a tag <code class="code_inline">&lt;col&gt;</code> informa ao navegador quais são as colunas e define suas propriedades, sendo apenas uma forma de referenciá-las, já que não exite tag para definir uma coluna, como a tag <code class="code_inline"><a href="#tr">&lt;tr&gt;</a></code> que define uma linha. A tag <code class="code_inline">col</code> também permite estilizar as colunas usando as <b>CSS</b>.</p>
             
+                <div class="exemplo">
+                    <h3 class="exemplo-titulo">Exemplo</h3>
+                    <div class="exemplo-codigo">
+                        <code>
+                            <p class="p_incode">
+                                <span>&lt;tables&gt;</span>
+                                    <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
+                                        <span style="margin-left: 40px;">&lt;td&gt;JavaScript&lt;/td&gt;</span>
+                                    <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span>&lt;/table&gt;</span>
+                            </p>
+                        </code>
+                    </div>
             
-            <section class="sessao_col">
+                    <h3 class="exemplo-titulo">Saída</h3>
+                    <div class="exemplo-saida">
+                        <table>
+                            
+                            <tr>
+                                <td></td> <!-- Célula em branco para ficar no canto da tabela -->
+                                <th scope="col">God of War</th>
+                                <th scpe="col">Hallo</th>
+                            </tr>
+                            <tr>
+                                <th>Plataforma</th>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <section class="sessao_colgroup">
                 <h2 class="titulo">Agrupamento de colunas - &lt;colgroup&gt;</h2>
                 
                 
