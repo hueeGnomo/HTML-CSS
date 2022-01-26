@@ -11,8 +11,8 @@
             }
             
             main {
-                width: 800px;
-                /*width: 350px;*/
+                /*width: 800px;*/
+                width: 350px;
                 border: 1px solid black;
                 margin: 0 auto;
                 padding: 15px;
@@ -44,7 +44,7 @@
             
             .exemplo-codigo, .exemplo-saida {
                 background-color: white;
-                width: 90%;
+               /* width: 90%;*/
                 border-left: 7px solid #5FEBCE;
                 line-height: 1.5em;
                 
@@ -55,6 +55,9 @@
                 margin-bottom: 20px;
             }
             
+            .exemplo-saida {
+                overflow: scroll;
+            }
             .exemplo-saida > table, th, td {
                 text-align: center;
                 border: 1px solid black;
@@ -62,9 +65,15 @@
 
                 padding: 3px;
             }
+            
+            .p_incode {
+                overflow: scroll;
+            }
+            
             .p_incode > span {
                 display: block;
             }
+  
             
         </style>
     </head>
@@ -92,76 +101,8 @@
             
             <p>Estruturando de forma básica e sem atributos, a tabela não terá delimitações visíveis, nem cor de fundo e originalmente eram usados os atributos para definir as cores. Porém esse recurso está obsoleto, e hoje em dia as cores são configuradas usando as <strong>CSS</strong>.</p>
                 
-            <!--col-->
-            <section class="sessao_col">
-                <h2 class="titulo">Colunas - &lt;col&gt;</h2>
-                <p>Como as tabelas são compostas basicamente de linhas e células de dados, a tag <code class="code_inline">&lt;col&gt;</code> informa ao navegador quais são as colunas e define suas propriedades, sendo apenas uma forma de referenciá-las, já que não exite tag para definir uma coluna, como a tag <code class="code_inline"><a href="#tr">&lt;tr&gt;</a></code> que define uma linha. A tag <code class="code_inline">col</code> também permite estilizar as colunas usando as <b>CSS</b>.</p>
             
-                <div class="exemplo">
-                    <h3 class="exemplo-titulo">Exemplo</h3>
-                    <div class="exemplo-codigo">
-                        <code>
-                            <p class="p_incode">
-                                <span>&lt;tables&gt;</span>
-                                    <span style="margin-left: 20px;">&lt;tr&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;JavaScript&lt;/td&gt;</span>
-                                    <span style="margin-left: 20px;">&lt;/tr&gt;</span>
-                                <span>&lt;/table&gt;</span>
-                            </p>
-                        </code>
-                    </div>
             
-                    <h3 class="exemplo-titulo">Saída</h3>
-                    <div class="exemplo-saida exemplo-saida__col">
-                        <table>
-                            <colgroup>
-                                <col> <!-- tag col vazia para pular a coluna -->
-                                <col span='2' >
-                            </colgroup>
-                            <tr>
-                                <td></td> <!-- Célula em branco para ficar no canto da tabela -->
-                                <th scope="col">God of War</th>
-                                <th scope="col">Horizon: Zero Dawn</th>
-                                <th scope="col">Halo</th>
-                                <th scope="col">Gears of War</th>
-                                <th scope="col">Zelda</th>
-                            </tr>
-                            <tr>
-                                <th scope="row">Plataforma</th>
-                                <td>PlayStation</td>
-                                <td>PlayStation</td>
-                                <td>XBox</td>
-                                <td>XBox</td>
-                                <td>Nintendo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Ano</th>
-                                <td>2005</td>
-                                <td>2017</td>
-                                <td>2001</td>
-                                <td>2006</td>
-                                <td>1986</td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                </div>
-                
-            </section>
-            
-            <section class="sessao_colgroup">
-                <h2 class="titulo">Agrupamento de colunas - &lt;colgroup&gt;</h2>
-                
-                
-                <h3 id="colgroup"><code class="code_inline">&lt;colgroup&gt;</code></h3>
-                <p>É mais usado para agrupar várias colunas 
-                <p>A tag <code class="code_inline">
-                &lt;colgroup&gt;</code> deve ser diretamente filha da tag <code class="code_inline">&lt;table&gt;</code> e </p>
-            </section>
-            
-            <!--
 
             <section class="sessao_table">
                 <h2 id="table" class="titulo">Estrutura da tabela - &lt;table&gt;</h2>
@@ -212,11 +153,11 @@
                         <code>
                             <p class="p_incode">
                                 <span>&lt;tables&gt;</span>
-                                    <span style="margin-left: 20px;">&lt;tr&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
-                                        <span style="margin-left: 40px;">&lt;td&gt;JavaScript&lt;/td&gt;</span>
-                                    <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;HTML&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;CSS&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;JavaScript&lt;/td&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
                                 <span>&lt;/table&gt;</span>
                             </p>
                         </code>
@@ -282,29 +223,138 @@
             </section>
             
             <hr>
-            -->
             
-            <!--
-            O elemento HTML <thead> define um conjunto de linhas definindo o cabeçalho das colunas da tabela.
-            -->
+            <section class="sessao_col">
+                <h2 class="titulo">Colunas - &lt;col&gt;</h2>
+                <p>Como as tabelas são compostas basicamente de linhas e células de dados, a tag <code class="code_inline">&lt;col&gt;</code> informa ao navegador quais são as colunas e define suas propriedades, sendo apenas uma forma de referenciá-las, já que não exite tag para definir uma coluna, como a tag <code class="code_inline"><a href="#tr">&lt;tr&gt;</a></code> que define uma linha. A tag <code class="code_inline">col</code> também permite estilizar as colunas usando as <b>CSS</b>.</p>
+            
+                <dl class="atributos">
+                    <dt><code id="span" class="atributos-termo">span</code>
+                    <dd class="atributos-descricao">
+                        Recebe um valor inteiro para indicar quantas colunas consecutivas a tag irá referenciar.
+                    </dd>
+                </dl>
+                
+                <div class="exemplo">
+                    <h3 class="exemplo-titulo">Exemplo</h3>
+                    <div class="exemplo-codigo">
+                        <code>
+                           <p class="p_incode">
+                                <span>&lt;table&gt;</span>
+                                <span style="margin-left: 20px;">&lt;colgroup&gt;</span>
+                                <span style="margin-left: 40px;">&lt;col&gt; &lt;!-- tag col vazia para pular a coluna --&gt;</span>
+                                <span style="margin-left: 40px;">&lt;col span="2" style="background-color: #003087;"&gt;</span>
+                                <span style="margin-left: 40px;">&lt;col span="2" style="background-color: #9bc848;"&gt;</span>
+                                <span style="margin-left: 40px;">&lt;col style="background-color: #fe0016;"&gt; &lt;!-- veja que é omitindo o atributo <i>span</i> é possível estilizar uma única coluna</span>
+                                <span style="margin-left: 20px;">&lt;/colgroup&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;&lt;/td&gt; &lt;!-- Célula em branco para ficar no canto da tabela --&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="col" style="color: #fff;"&gt;God of War&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="col" style="color: #fff;"&gt;Horizon: Zero Dawn&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="col"&gt;Halo&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="col"&gt;Gears of War&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="col"&gt;Zelda&lt;/th&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="row"&gt;Gênero&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;Ação-aventura&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;RPG de ação&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;FPS&lt;sup&gt;&lt;small&gt;1&lt;/small&gt;&lt;/sup&gt;&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;TPS&lt;sup&gt;&lt;small&gt;2&lt;/small&gt;&lt;/sup&gt;&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;Ação-aventura&lt;/td&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="row"&gt;Ano&lt;/th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;2005&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;2017&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;2001&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;2006&lt;/td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;1986&lt;td&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;th scope="row"&gt;Desenvolvedora&lt;th&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;Santa Monica Studio&lt;td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td style="color: #fff;"&gt;Gerrilla Games&lt;td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;Bungie&lt;td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;Epic Games&lt;td&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td&gt;Nintendo&lt;td&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span style="margin-left: 20px;">&lt;tr&gt;</span>
+                                <span style="margin-left: 40px;">&lt;td colspan="6" style="font-size: 0.75em"&gt;1 = First-Person Shooter (Tiro em Primeira Pessoa)&lt;br&gt;2 = Third-Person Shooter (Tiro em Terceira Pessoa)&lt;td&gt;</span>
+                                <span style="margin-left: 20px;">&lt;/tr&gt;</span>
+                                <span>&lt;/table&gt;</span>
+                            </p>
+                        </code>
+                    </div>
+            
+                    <h3 class="exemplo-titulo">Saída</h3>
+                    <div class="exemplo-saida exemplo-saida__col">
+                        <table>
+                            <colgroup>
+                                <col> <!-- tag col vazia para pular a coluna -->
+                                <col span="2" style="background-color: #003087;">
+                                <col span="2" style="background-color: #9bc848;">
+                                <col style="background-color: #fe0016;">
+                            </colgroup>
+                            <tr>
+                                <td></td> <!-- Célula em branco para ficar no canto da tabela -->
+                                <th scope="col" style="color: #fff;">God of War</th>
+                                <th scope="col" style="color: #fff;">Horizon: Zero Dawn</th>
+                                <th scope="col">Halo</th>
+                                <th scope="col">Gears of War</th>
+                                <th scope="col">Zelda</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Gênero</th>
+                                <td style="color: #fff;">Ação-aventura</td>
+                                <td style="color: #fff;">RPG de ação</td>
+                                <td>FPS<sup><small>1</small></sup></td>
+                                <td>TPS<sup><small>2</small></sup></td>
+                                <td>Ação-aventura</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ano</th>
+                                <td style="color: #fff;">2005</td>
+                                <td style="color: #fff;">2017</td>
+                                <td>2001</td>
+                                <td>2006</td>
+                                <td>1986</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Desenvolvedora</th>
+                                <td style="color: #fff;">Santa Monica Studio</td>
+                                <td style="color: #fff;">Gerrilla Games</td>
+                                <td>Bungie</td>
+                                <td>Epic Games</td>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="font-size: 0.75em">1 = First-Person Shooter (Tiro em Primeira Pessoa)<br>2 = Third-Person Shooter (Tiro em Terceira Pessoa)</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <hr>
+            
+            <section class="sessao_colgroup">
+                <h2 class="titulo">Agrupamento de colunas - &lt;colgroup&gt;</h2>
+                
+                
+                <h3 id="colgroup"><code class="code_inline">&lt;colgroup&gt;</code></h3>
+                <p>A tag <code class="code_inline">&lt;colgroup&gt;</code> é usada para agrupar várias colunas. Porém também pode ser usada sozinha, pois recebe os mesmos atributos da tag <code class="code_inline"><a href="#col">&lt;col&gt;</a></code>.</p>
+                <p> Ela deve ser diretamente filha da tag <code class="code_inline">&lt;table&gt;</code> e vir imediatamente abaixo da tag <code class="code_inline"><a href="#caption">&lt;caption&gt;</a></code>se ela existir.</p>
+            </section>
+            
+            <hr>
+            
+            <section class="sessao_agrupamento">
+               <h2 class="titulo">Agrupamento de linhas - &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;</h2> 
+                <p>Os elementos &lt;thead&gt;&lt;tbody&gt; e &lt;tfoot&gt; são containers semanticos que agrupam um conjunto de linhas definindo o cabeçalho, o corpo e o rodapé da tabela, respectivamente.</p>
+            </section>
         </main>
     </body>
 </html>
-
-<!--
-codigos
-
-&lt;&gt;
--->
-<!--
-                <table>	Defines a table
-                <th> Defines a header cell in a table
-                <tr> Defines a row in a table
-                <td> Defines a cell in a table
-                <caption> Defines a table caption
-                <colgroup> Specifies a group of one or more columns in a table for formatting
-                <col> Specifies column properties for each column within a <colgroup> element
-                <thead> Groups the header content in a table
-                <tbody>	Groups the body content in a table
-                <tfoot> Groups the footer content in a table
-                -->
